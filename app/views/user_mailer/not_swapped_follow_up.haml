@@ -1,11 +1,12 @@
 %p
 	Hi #{@user.name},
 %p
-	Thanks for taking part in Swap My Vote! Votes for #{@user.willing_party.name}
-	are in high demand; wanting to cast a vote
-	elsewhere for the #{@user.preferred_party.name} party means that you should
-	have plenty of choice for potential voting partners to make sure that your
-	vote is cast where it will count the most for you.
+	Thanks for taking part in Swap My Vote!
+%p
+	Votes for your party are in high demand; wanting to cast a vote elsewhere for
+	the #{@user.preferred_party.name} party means that you should
+	have plenty of choice for potential voting partners to ensure your vote is
+	cast where it will count the most for you.
 	= link_to "Log in to swapmyvote.uk now to find a swap partner.", user_url(log_in_with: @user.provider)
 %p
 	If you've not been able to find someone that you're willing to swap with,
@@ -16,10 +17,10 @@
 	%br
 	Swap My Vote Team
 %p
-	<a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=not_swapped_follow_up&utm_campaign=site">Swap My Vote</a>
-	%br
-	<a href="https://twitter.com/intent/follow?screen_name=swapmyvote">Follow Swap My Vote on Twitter</a>
-	%br
-	<a href="https://facebook.com/swapmyvote">Like Swap My Vote on Facebook</a>
-
-
+  <a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=confirm_swap&utm_campaign=site">Swap My Vote</a>
+  %br
+  <a href="https://twitter.com/intent/follow?screen_name=swapmyvote">Follow Swap My Vote on Twitter</a>
+  %br
+  <a href="https://facebook.com/swapmyvote">Like Swap My Vote on Facebook</a>
+  %br
+  <a href="https://crowdfunder.co.uk/swapmyvote">Support Swap My Vote on Crowdfunder</a>

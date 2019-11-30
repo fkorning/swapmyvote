@@ -3,19 +3,23 @@
 %p
   The 2019 General Election Polls are open!
   = user_profile_link(@user.swapped_with)
-  is going to vote #{@user.swapped_with.willing_party.name} for you,
-  in the #{@user.swapped_with.constituency.name} constituency.
+  is going to vote for your party, in the #{@user.swapped_with.constituency.name}
+  constituency.
 %p
-  In return, you've agreed to vote #{@user.willing_party.name}
-  in your constituency (#{@user.constituency.name}). Once you've done so,
+  In return, you've agreed to vote for their preferred party in your
+  constituency (#{@user.constituency.name}).
+%p
+  Once you've done so,
   = link_to "please let #{@user.swapped_with.name} know you've voted!", user_vote_url(log_in_with: @user.provider)
 %p
   All the best,
   %br
   Swap My Vote Team
 %p
-  <a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=reminder_to_vote&utm_campaign=site">Swap My Vote</a>
+  <a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=confirm_swap&utm_campaign=site">Swap My Vote</a>
   %br
   <a href="https://twitter.com/intent/follow?screen_name=swapmyvote">Follow Swap My Vote on Twitter</a>
   %br
   <a href="https://facebook.com/swapmyvote">Like Swap My Vote on Facebook</a>
+  %br
+  <a href="https://crowdfunder.co.uk/swapmyvote">Support Swap My Vote on Crowdfunder</a>

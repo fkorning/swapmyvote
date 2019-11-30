@@ -2,23 +2,22 @@
   Hi #{@user.name},
 %p
   Good news! #{@user.swapped_with.name} has voted
-  %strong #{@user.preferred_party.name}
-  for you in #{@user.swapped_with.constituency.name}!
+  %strong for your preferred party in #{@user.swapped_with.constituency.name}!
 %p
   If you haven't done so already,
   = link_to "please let us know", user_vote_url(log_in_with: @user.provider)
-  when you've voted for
-  %strong #{@user.willing_party.name}
-  on behalf of #{@user.swapped_with.name} in #{@user.constituency.name}.
+  when you've voted on behalf of #{@user.swapped_with.name} for
+  %strong in #{@user.constituency.name}.
   = link_to "You can do that by clicking here.", user_vote_url(log_in_with: @user.provider)
 %p
   All the best,
   %br
   Swap My Vote Team
 %p
-  <a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=partner_has_voted&utm_campaign=site">Swap My Vote</a>
+  <a href="https://www.swapmyvote.uk/?utm_source=email&utm_medium=confirm_swap&utm_campaign=site">Swap My Vote</a>
   %br
   <a href="https://twitter.com/intent/follow?screen_name=swapmyvote">Follow Swap My Vote on Twitter</a>
   %br
   <a href="https://facebook.com/swapmyvote">Like Swap My Vote on Facebook</a>
-
+  %br
+  <a href="https://crowdfunder.co.uk/swapmyvote">Support Swap My Vote on Crowdfunder</a>
